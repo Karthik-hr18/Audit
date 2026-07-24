@@ -4,7 +4,7 @@ import { validateAndNormalizeUrl } from "../utils/urlValidator";
 import { parseHtml } from "./parserService";
 import { AuditResult, AuditError } from "../types/audit";
 
-const TIMEOUT_MS = 8000;
+const TIMEOUT_MS = 12000;
 
 // HTTPS Agent that accepts self-signed or legacy SSL certificates for auditing flexibility
 const httpsAgent = new https.Agent({
