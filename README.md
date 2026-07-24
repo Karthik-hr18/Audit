@@ -139,6 +139,14 @@ npm test
 
 ---
 
-## 📜 Mandatory Credit Line
+---
 
-Built for [Digital Heroes Training Task](https://digitalheroesco.com).
+## 🤖 AI Usage Disclosure & Engineering Iterations
+
+**Where AI Was Used**: AI was utilized as a senior engineering mentor during the initial project breakdown—assisting with project architecture layering (separating Controller, Service, and Parser), outlining edge-case error scenarios (timeouts, DNS failures, non-HTML responses), and writing boilerplate configuration files.
+
+**What I Changed & Decided Afterwards**:
+1. **Decoupled Pure Parser**: Refactored the Cheerio HTML parsing into a standalone pure function (`parseHtml`), enabling zero-network unit tests running in under 20ms.
+2. **AWS WAF & Bot Challenge Detection**: Identified that major platforms (like IMDb) return `202 Accepted` with AWS WAF challenge scripts. Created explicit WAF detection logic and built an interactive warning banner on the frontend UI.
+3. **Defensive I/O Controls**: Configured `rejectUnauthorized: false` for legacy SSL handshakes, updated browser headers to prevent anti-bot blocks, and implemented strict timeout handling to ensure the backend never crashes.
+
