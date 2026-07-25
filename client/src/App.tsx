@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import heroImg from "./assets/hero.png";
 
 interface AuditResult {
   url: string;
@@ -62,17 +63,63 @@ export default function App() {
 
   return (
     <div className="app-container">
-      {/* Header */}
-      <header className="app-header">
-        <div className="brand-badge">
-          <span className="pulse-dot"></span>
-          Page Pulse Web Auditor
+      {/* Premium Tech Hero Section */}
+      <section className="hero-section">
+        <div className="hero-text-content">
+          <div className="brand-badge">
+            <span className="pulse-dot"></span>
+            Page Pulse Web Auditor 2.0
+          </div>
+          <h1 className="app-title">Audit & Optimize Any Web Page in Real Time</h1>
+          <p className="app-subtitle">
+            Extract instant SEO metrics, response timing, heading counts, and image accessibility details with high-speed precision.
+          </p>
+
+          <div className="hero-feature-pills">
+            <div className="feature-pill">
+              <span>⚡</span> 20ms Pure Parsing
+            </div>
+            <div className="feature-pill">
+              <span>🛡️</span> AWS WAF Aware
+            </div>
+            <div className="feature-pill">
+              <span>🎯</span> Zero-Crash Core
+            </div>
+          </div>
         </div>
-        <h1 className="app-title">Audit Any Web Page</h1>
-        <p className="app-subtitle">
-          Extract instant SEO metrics, response timing, heading counts, and image accessibility details cleanly.
-        </p>
-      </header>
+
+        {/* Hero Visual Showcase with Rounded Curved Container & Floating Badges */}
+        <div className="hero-visual-wrapper">
+          <div className="ambient-glow-orb"></div>
+
+          {/* Floating Badge Top Left */}
+          <div className="floating-badge floating-badge-top">
+            <span className="badge-icon">🚀</span>
+            <div>
+              <div className="badge-text-primary">99.8% Audit Speed</div>
+              <div className="badge-text-secondary">Instant Parsing Engine</div>
+            </div>
+          </div>
+
+          {/* Curved Glassmorphism Image Container */}
+          <div className="hero-image-card">
+            <img
+              src={heroImg}
+              alt="Page Pulse Analytics Dashboard"
+              className="hero-img"
+            />
+          </div>
+
+          {/* Floating Badge Bottom Right */}
+          <div className="floating-badge floating-badge-bottom">
+            <span className="badge-icon">🛡️</span>
+            <div>
+              <div className="badge-text-primary">Defensive I/O</div>
+              <div className="badge-text-secondary">100% Fail-safe API</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Audit Input Form */}
       <div className="audit-form-card">
@@ -168,7 +215,7 @@ export default function App() {
               style={{
                 background: "rgba(245, 158, 11, 0.12)",
                 border: "1px solid rgba(245, 158, 11, 0.3)",
-                borderRadius: "10px",
+                borderRadius: "12px",
                 padding: "1rem",
                 marginBottom: "1rem",
                 display: "flex",
